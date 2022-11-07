@@ -1,12 +1,17 @@
-Coles Code Challenge for Software Engineer
+# Coles Code Challenge for Software Engineer
 
-Solution:
+## Solution:
 
 Java SE 17 (LTS)
+
 Spring Boot
+
 Spring Webflux
+
 Webclient consumer
+
 Maven
+
 IntelliJ IDEA
 
 I used Spring Initializer to create a Spring Webflux project for a Reactive Restful Web Service to solve this problem and expose 
@@ -21,11 +26,11 @@ Then, if the count is more than one, I extract "artists" field from the artist r
 Else if the count of artist is one, first I extract ["artist"]["id"] field and then query the musicbrainz API
 ("/releases") end point with artist id and then extract the "releases" field from Release response and return it.
 
-Assumptions:
+## Assumptions:
 
 The provided artist/ band name is a valid string and has an entry in the musicbrainz database
 
-Design Decision:
+## Design Decision:
 
 I used the latest Spring Webflux as RestTemplate is deprecated.
 
@@ -37,7 +42,7 @@ I did postprocessing on the webclient response synchronously without blocking bu
 
 Server port config is set in application.properties file inside "resources" folder.
 
-Further Work with More Time:
+## Further Work with More Time:
 
 1. Preprocessing the query parameter of the endpoint "artistname" to ensure it contains only alphabets and trim any leading or trailing whitespaces
 2. Error handling in the MusicService class to handle error status on response from musicbrainz api
