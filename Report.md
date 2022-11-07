@@ -6,8 +6,10 @@ Java SE 17 (LTS)
 Spring Boot
 Spring Webflux
 Webclient consumer
+Maven
+IntelliJ IDEA
 
-I used Spring Webflux for a Reactive Restful Web Service to solve this problem and expose 
+I used Spring Initializer to create a Spring Webflux project for a Reactive Restful Web Service to solve this problem and expose 
 one Rest End point "/music" with query parameter "artistname".
 
 MusicController handles the get mapping and calls the MusicService to return either collection of artists or 
