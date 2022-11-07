@@ -26,6 +26,12 @@ Then, if the count is more than one, I extract "artists" field from the artist r
 Else if the count of artist is one, first I extract ["artist"]["id"] field and then query the musicbrainz API
 ("/releases") end point with artist id and then extract the "releases" field from Release response and return it.
 
+Usage:
+
+http://localhost:8090/music?artistname=coldplay
+
+http://localhost:8090/music?artistname=jlo
+
 ## Assumptions:
 
 The provided artist/ band name is a valid string and has an entry in the musicbrainz database
